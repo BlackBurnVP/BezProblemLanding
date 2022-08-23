@@ -1,6 +1,7 @@
 package com.example.bp.controller;
 
 import com.example.bp.domain.Lead;
+import com.example.bp.domain.Origins;
 import com.example.bp.repository.LeadRepo;
 import com.example.bp.repository.UserRepo;
 import com.example.bp.service.LeadService;
@@ -33,7 +34,7 @@ public class MainController {
     public String callRequest(
             Lead lead
     ){
-        lead.setOrigin("Landing");
+        lead.setOrigin(Origins.System);
         lead.setCreated(new Date());
         lead.setCreatedBy(userRepo.getSystemUser());
         leadRepo.save(lead);

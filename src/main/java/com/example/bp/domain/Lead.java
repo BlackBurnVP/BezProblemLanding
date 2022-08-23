@@ -14,7 +14,7 @@ public class Lead {
     private Long id;
     private String credentials;
     private String phoneNumber;
-    private String origin;
+    private Origins origin;
 
     private String CallComment;
     private boolean isCalled;
@@ -49,11 +49,11 @@ public class Lead {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getOrigin() {
+    public Origins getOrigin() {
         return origin;
     }
 
-    public void setOrigin(String origin) {
+    public void setOrigin(Origins origin) {
         this.origin = origin;
     }
 
