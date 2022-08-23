@@ -15,28 +15,28 @@
 /* Fonts */
 @font-face {
   font-family: "Montserrat";
-  src: local("Montserrat-Regular"), url("./static/fonts/Montserrat-Regular.woff2") format("woff2"), url("./static/fonts/Montserrat-Regular.woff") format("woff");
+  src: local("Montserrat-Regular"), url("/static/fonts/Montserrat-Regular.woff2") format("woff2"), url("/static/fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: local("Montserrat-Medium"), url("./static/fonts/Montserrat-Medium.woff2") format("woff2"), url("./static/fonts/Montserrat-Medium.woff") format("woff");
+  src: local("Montserrat-Medium"), url("/static/fonts/Montserrat-Medium.woff2") format("woff2"), url("/static/fonts/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: local("Montserrat-SemiBold"), url("./static/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("./static/fonts/Montserrat-SemiBold.woff") format("woff");
+  src: local("Montserrat-SemiBold"), url("/static/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("/static/fonts/Montserrat-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: local("Montserrat-Bold"), url("./static/fonts/Montserrat-Bold.woff2") format("woff2"), url("./static/fonts/Montserrat-Bold.woff") format("woff");
+  src: local("Montserrat-Bold"), url("/static/fonts/Montserrat-Bold.woff2") format("woff2"), url("/static/fonts/Montserrat-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -238,24 +238,24 @@ i {
 /* Main animation */
 @-webkit-keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 @-webkit-keyframes trambling-animation {
@@ -435,7 +435,7 @@ i {
 .video .video-btn div span {
   -webkit-animation: pulse 2s ease-in-out infinite;
   animation: pulse 2s ease-in-out infinite;
-  background-image: url(./static/img/icons/play.svg);
+  background-image: url(/static/img/icons/play.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
@@ -527,10 +527,10 @@ i {
   transform: rotate(45deg);
 }
 .burger__cross span:nth-child(1) {
-  height: 0%;
+  height: 0;
   width: 2px;
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   transition-delay: 0s;
@@ -680,7 +680,7 @@ i {
 .messengers__icon {
   width: 45%;
   height: 45%;
-  background-image: url(./static/img/icons/message.svg);
+  background-image: url(/static/img/icons/message.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -741,19 +741,19 @@ i {
   }
 }
 .messengers__link.s-telegram {
-  background-image: url(./static/img/icons/s-telegram.svg);
+  background-image: url(/static/img/icons/s-telegram.svg);
 }
 .messengers__link.s-instagram {
-  background-image: url(./static/img/icons/s-instagram.svg);
+  background-image: url(/static/img/icons/s-instagram.svg);
 }
 .messengers__link.s-facebook {
-  background-image: url(./static/img/icons/s-facebook.svg);
+  background-image: url(/static/img/icons/s-facebook.svg);
 }
 .messengers__link.s-tiktok {
-  background-image: url(./static/img/icons/s-tiktok.svg);
+  background-image: url(/static/img/icons/s-tiktok.svg);
 }
 .messengers__link.s-phone {
-  background-image: url(./static/img/icons/s-phone.svg);
+  background-image: url(/static/img/icons/s-phone.svg);
 }
 .messengers__telegram {
   cursor: pointer;
@@ -816,7 +816,7 @@ i {
   width: 20px;
   height: 20px;
   right: 0;
-  background: no-repeat center url(./static/img/icons/telegram-chat.svg);
+  background: no-repeat center url(/static/img/icons/telegram-chat.svg);
   background-size: contain;
   transform: translateX(200%);
   opacity: 0;
@@ -859,7 +859,7 @@ i {
   position: absolute;
   content: "";
   pointer-events: none;
-  background-image: url(./static/img/icons/bg-r.svg);
+  background-image: url(/static/img/icons/bg-r.svg);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: contain;
@@ -1059,7 +1059,7 @@ i {
   position: absolute;
   content: "";
   pointer-events: none;
-  background-image: url(./static/img/icons/bg-l.svg);
+  background-image: url(/static/img/icons/bg-l.svg);
   background-repeat: no-repeat;
   background-position: right center;
   background-size: contain;
@@ -1166,7 +1166,7 @@ i {
   content: "";
   width: 15px;
   height: 15px;
-  background-image: url(./static/img/icons/angle-down.svg);
+  background-image: url(/static/img/icons/angle-down.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1235,7 +1235,7 @@ i {
   cursor: pointer;
   right: -15px;
   top: -15px;
-  background-image: url(./static/img/icons/close.svg);
+  background-image: url(/static/img/icons/close.svg);
   background-position: center;
   background-size: 30%;
   background-repeat: no-repeat;

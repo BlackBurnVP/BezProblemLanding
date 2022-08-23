@@ -2,969 +2,1014 @@
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<title>BezProblem</title>
-	<meta content="Краткое описание веб-страницы длиной 100-150 символов" name="description" />
-	<meta content="ключевая фраза 1, ключевая фраза 2, ключевая фраза 3" name="keywords" />
-	<meta content="https://seoportal.net" name="url" />
-	<!-- Должен содержать ссылку на канонический URL-адрес (дубль текущей страницы, который нужно индексировать). -->
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<link data-n-head="ssr" href="/static/img/favicon.svg" rel="icon" type="image/svg+xml">
-	<link rel="stylesheet" href="/static/css/splide.min.css">
-<link rel="stylesheet" href="/static/css/style.css">
-<link rel="stylesheet" href="/static/css/responsive.css">
+    <meta charset="UTF-8">
+    <title>BezProblem</title>
+    <meta content="Краткое описание веб-страницы длиной 100-150 символов" name="description"/>
+    <meta content="ключевая фраза 1, ключевая фраза 2, ключевая фраза 3" name="keywords"/>
+    <meta content="https://seoportal.net" name="url"/>
+    <!-- Должен содержать ссылку на канонический URL-адрес (дубль текущей страницы, который нужно индексировать). -->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link data-n-head="ssr" href="/static/img/favicon.svg" rel="icon" type="image/svg+xml">
+    <link href="/static/css/splide.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/responsive.css" rel="stylesheet">
 
 </head>
 
 <body>
-	<div class="wrapper">
-		<!-- Header -->
-<header class="header">
-	<div class="container">
-		<div class="header__inner">
-			<div class="logo flex">
-				<a href="/static">
-					<img width="36" height="41" src="/static/img/icons/logo.svg" alt="Bez Problem Service">
-					<p class="logo__animated-wrap">
-						<span class="logo__bold animated-letter">B</span>
-						<span class="logo__bold animated-letter">e</span>
-						<span class="logo__bold animated-letter">z</span>
-						<span class="animated-letter">P</span>
-						<span class="animated-letter">r</span>
-						<span class="animated-letter">o</span>
-						<span class="animated-letter">b</span>
-						<span class="animated-letter">l</span>
-						<span class="animated-letter">e</span>
-						<span class="animated-letter">m</span>
-					</p>
-				</a>
-			</div>
-			<nav class="navigation">
-				<ul class="navigation__list">
-					<li class="navigation__list-item">
-						<a class="hover-link scroll-to" href="#options">
-							Тарифы
-						</a>
-					</li>
-					<li class="navigation__list-item">
-						<a class="hover-link scroll-to" href="#partners">
-							Партнёры
-						</a>
-					</li>
-					<li class="navigation__list-item">
-						<a class="hover-link scroll-to" href="#contact">
-							Контакты
-						</a>
-					</li>
-					<li>
-						<a class="g-tel" href="tel:+48733833388">
-							+48733-83-33-88
-						</a>
-					</li>
-				</ul>
-			</nav>
-			<!-- Card burger -->
-<div class="burger">
-	<div class="burger__toggle">
-		<div class="burger__main">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-		<div class="burger__cross">
-			<span></span>
-			<span></span>
-		</div>
-	</div>
-</div><!-- Card burger -->
-		</div>
-	</div>
-</header>
+<div class="wrapper">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo flex">
+                    <a href="/static">
+                        <img alt="Bez Problem Service" height="41" src="/static/img/icons/logo.svg" width="36">
+                        <p class="logo__animated-wrap">
+                            <span class="logo__bold animated-letter">B</span>
+                            <span class="logo__bold animated-letter">e</span>
+                            <span class="logo__bold animated-letter">z</span>
+                            <span class="animated-letter">P</span>
+                            <span class="animated-letter">r</span>
+                            <span class="animated-letter">o</span>
+                            <span class="animated-letter">b</span>
+                            <span class="animated-letter">l</span>
+                            <span class="animated-letter">e</span>
+                            <span class="animated-letter">m</span>
+                        </p>
+                    </a>
+                </div>
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__list-item">
+                            <a class="hover-link scroll-to" href="#options">
+                                Тарифы
+                            </a>
+                        </li>
+                        <li class="navigation__list-item">
+                            <a class="hover-link scroll-to" href="#partners">
+                                Партнёры
+                            </a>
+                        </li>
+                        <li class="navigation__list-item">
+                            <a class="hover-link scroll-to" href="#contact">
+                                Контакты
+                            </a>
+                        </li>
+                        <li>
+                            <a class="g-tel" href="tel:+48733833388">
+                                +48 733-833-388
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Card burger -->
+                <div class="burger">
+                    <div class="burger__toggle">
+                        <div class="burger__main">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="burger__cross">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div><!-- Card burger -->
+            </div>
+        </div>
+    </header>
 
-		<!-- Main -->
-		<main class="main">
-			<!-- Content -->
-			<div class="content">
-				<!-- Intro -->
-				<section class="intro section-mb">
-					<div class="container">
-						<div class="intro__inner">
-							<div class="intro__left flex-c">
-								<h1 class="g-title g-title--h1">
-									BezProblem Partner
-								</h1>
-								<p>
-									Карты проживания, работа курьером, работа в такси, легальное пребывание в Польше!
-								</p>
-								<div class="video flex">
-									<div class="video-btn flex">
-										<div>
-											<span></span>
-										</div>
-										<p>Посмотрите видео о нашей компании</p>
-									</div>
-									<div class="video__player">
-										<video controls src=""></video>
-									</div>
-								</div>
-								<div class="g-button">
-									<a href="#">
-										Закажите обратный звонок
-									</a>
-								</div>
-							</div>
-							<div class="intro__right flex">
-								<div class="splide splide1">
-									<div class="splide__track">
-										<ul class="splide__list">
-											<li class="splide__slide">
-												<img alt="Courier" height="700" src="/static/img/couriers/s-1.webp"
-													width="630">
-											</li>
-											<li class="splide__slide">
-												<img alt="Courier" height="700" loading="lazy"
-													src="/static/img/couriers/s-2.webp" width="630">
-											</li>
-											<li class="splide__slide">
-												<img alt="Courier" height="700" loading="lazy"
-													src="/static/img/couriers/s-3.webp" width="630">
-											</li>
-											<li class="splide__slide">
-												<img alt="Courier" height="700" loading="lazy"
-													src="/static/img/couriers/s-4.webp" width="630">
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="intro__counter">
-							<div class="intro__slider splide splide4">
-								<div class="splide__track">
-									<ul class="splide__list">
-										<li class="splide__slide">
-											<div class="intro__counter-item">
-												<div class="counter" data-target="871"></div>
-												<span>Машин</span>
-											</div>
-										</li>
-										<li class="splide__slide">
-											<div class="intro__counter-item">
-												<div class="counter" data-target="571"></div>
-												<span>Велосипедов</span>
-											</div>
-										</li>
-										<li class="splide__slide">
-											<div class="intro__counter-item">
-												<div class="counter" data-target="2871"></div>
-												<span>Курьеров</span>
-											</div>
-										</li>
-										<li class="splide__slide">
-											<div class="intro__counter-item">
-												<div class="counter" data-target="10871"></div>
-												<span>Заказов</span>
-											</div>
-										</li>
-										<li class="splide__slide">
-											<div class="intro__counter-item">
-												<div class="counter" data-target="5871"></div>
-												<span>Выплат</span>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="intro__items">
-							<div class="intro__item flex">
-								<div class="intro__item-img">
-									<img alt="Card" height="30" src="/static/img/icons/card-pob.svg" width="30">
-								</div>
-								<h4 class="g-title g-title--h4 intro__item-title">
-									Карты проживания
-								</h4>
-								<div class="intro__item-text">
-									Вид на жительство в течение срока его действия подтверждает вашу карту во время
-									вашего пребывания в Польше.
-									Имея вид на жительство и паспорт, Вы можете пересекать границу без визы.
-								</div>
-							</div>
-							<div class="intro__item flex">
-								<div class="intro__item-img">
-									<img alt="Taxi" height="30" src="/static/img/icons/car.svg" width="30">
-								</div>
-								<h4 class="g-title g-title--h4 intro__item-title">
-									Работа в такси
-								</h4>
-								<div class="intro__item-text">
-									Предлагаем работу водителем в Варшаве на платформах <strong>UBER</strong> /
-									<strong>BOLT</strong> .
-									Работа на новых автомобилях от 2020 года (KIA, FORD, HYUNDAI)
-								</div>
-							</div>
-							<div class="intro__item flex">
-								<div class="intro__item-img">
-									<img alt="Delivery" height="30" src="/static/img/icons/routing.svg" width="30">
-								</div>
-								<h4 class="g-title g-title--h4 intro__item-title">
-									Курьерская работа
-								</h4>
-								<div class="intro__item-text">
-									<strong>BezProblem</strong> Сервис - партнер <strong>GLOVO</strong> / <strong>BOLT
-										FOOD</strong>.
-									Предлагаем Вам работу курьером в Варшаве на мировых платформах!
-								</div>
-							</div>
-							<div class="intro__item flex">
-								<div class="intro__item-img">
-									<img alt="Job agency" height="30" src="/static/img/icons/personalcard.svg" width="30">
-								</div>
-								<h4 class="g-title g-title--h4 intro__item-title">
-									Агенство труда
-								</h4>
-								<div class="intro__item-text">
-									Работа в Польше на фабриках, складах, заводах, теплицах и т.д.
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+    <!-- Main -->
+    <main class="main">
+        <!-- Content -->
+        <div class="content">
+            <!-- Intro -->
+            <section class="intro section-mb">
+                <div class="container">
+                    <div class="intro__inner">
+                        <div class="intro__left flex-c">
+                            <h1 class="g-title g-title--h1">
+                                BezProblem Partner
+                            </h1>
+                            <p>
+                                Карты проживания, работа курьером, работа в такси, легальное пребывание в Польше!
+                            </p>
+                            <div class="video flex">
+                                <div class="video-btn flex">
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                    <p>Посмотрите видео о нашей компании</p>
+                                </div>
+                                <div class="video__player">
+                                    <video controls src=""></video>
+                                </div>
+                            </div>
+                            <div class="g-button">
+                                <a href="#">
+                                    Закажите обратный звонок
+                                </a>
+                            </div>
+                        </div>
+                        <div class="intro__right flex">
+                            <div class="splide splide1">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img alt="Courier" height="700" src="/static/img/couriers/s-1.webp"
+                                                 width="630">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img alt="Courier" height="700" loading="lazy"
+                                                 src="/static/img/couriers/s-2.webp" width="630">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img alt="Courier" height="700" loading="lazy"
+                                                 src="/static/img/couriers/s-3.webp" width="630">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img alt="Courier" height="700" loading="lazy"
+                                                 src="/static/img/couriers/s-4.webp" width="630">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro__counter">
+                        <div class="intro__slider splide splide4">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div class="intro__counter-item">
+                                            <div class="counter" data-target="871"></div>
+                                            <span>Машин</span>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="intro__counter-item">
+                                            <div class="counter" data-target="571"></div>
+                                            <span>Велосипедов</span>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="intro__counter-item">
+                                            <div class="counter" data-target="2871"></div>
+                                            <span>Курьеров</span>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="intro__counter-item">
+                                            <div class="counter" data-target="10871"></div>
+                                            <span>Заказов</span>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="intro__counter-item">
+                                            <div class="counter" data-target="5871"></div>
+                                            <span>Выплат</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro__items">
+                        <div class="intro__item flex">
+                            <div class="intro__item-img">
+                                <img alt="Card" height="30" src="/static/img/icons/card-pob.svg" width="30">
+                            </div>
+                            <h4 class="g-title g-title--h4 intro__item-title">
+                                Карта Побыта
+                            </h4>
+                            <div class="intro__item-text">
+                                Вид на жительство в течение срока его действия подтверждает вашу карту во время
+                                вашего пребывания в Польше.
+                                Имея вид на жительство и паспорт, Вы можете пересекать границу без визы.
+                            </div>
+                        </div>
+                        <div class="intro__item flex">
+                            <div class="intro__item-img">
+                                <img alt="Taxi" height="30" src="/static/img/icons/car.svg" width="30">
+                            </div>
+                            <h4 class="g-title g-title--h4 intro__item-title">
+                                Работа в такси
+                            </h4>
+                            <div class="intro__item-text">
+                                Предлагаем работу водителем в Польше на платформах <strong>UBER</strong> /
+                                <strong>BOLT</strong><strong>Free Now</strong>.
+                                Работа на новых автомобилях от 2020 года (KIA, FORD, HYUNDAI)
+                            </div>
+                        </div>
+                        <div class="intro__item flex">
+                            <div class="intro__item-img">
+                                <img alt="Delivery" height="30" src="/static/img/icons/routing.svg" width="30">
+                            </div>
+                            <h4 class="g-title g-title--h4 intro__item-title">
+                                Работа курьером
+                            </h4>
+                            <div class="intro__item-text">
+                                <strong>BezProblem</strong> - партнер <strong>UBER EATS</strong> / <strong>BOLT
+								FOOD</strong>/<strong>Stuart</strong>.
+                                Предлагаем Вам работу курьером в Польше на мировых платформах!
+                            </div>
+                        </div>
+                        <div class="intro__item flex">
+                            <div class="intro__item-img">
+                                <img alt="Job agency" height="30" src="/static/img/icons/personalcard.svg" width="30">
+                            </div>
+                            <h4 class="g-title g-title--h4 intro__item-title">
+                                Агенство труда
+                            </h4>
+                            <div class="intro__item-text">
+                                Работа в Польше на фабриках, складах, заводах, теплицах и т.д.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-				<!-- Options -->
-				<section class="options section-mb" id="options">
-					<div class="container">
-						<h2 class="g-title g-title--h2">
-							Варианты сотрудничества
-						</h2>
-						<div class="options__inner">
-							<div class="splide splide2">
-								<div class="splide__track">
-									<ul class="splide__list">
-										<li class="splide__slide">
-											<div class="options__item-wrap">
-												<div class="options__item flex-c">
-													<h3 class="g-title g-title--h3">
-														Standard
-													</h3>
-													<span class="options__payment">Выплата раз в неделю</span>
-													<span class="options__time">Комиссия за <strong>день</strong>
+            <!-- Options -->
+            <section class="options section-mb" id="options">
+                <div class="container">
+                    <h2 class="g-title g-title--h2">
+                        Варианты сотрудничества
+                    </h2>
+                    <div class="options__inner">
+                        <div class="splide splide2">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div class="options__item-wrap">
+                                            <div class="options__item flex-c">
+                                                <h3 class="g-title g-title--h3">
+                                                    Standard
+                                                </h3>
+                                                <span class="options__payment">Выплата раз в неделю</span>
+                                                <span class="options__time">Комиссия за <strong>неделю</strong>
 													</span>
-													<ul class="options__list flex-c">
-														<li>
-															<span>30 zl</span>
-															- 1 приложение
-														</li>
-														<li>
-															<span>40 zl</span> - 2 приложения
-														</li>
-														<li>
-															<span>50 zl</span> - 3 приложения
-														</li>
-													</ul>
-													<span class="options__time">
+                                                <ul class="options__list flex-c">
+                                                    <li>
+                                                        <span>30 zl</span> - 1 приложение
+                                                    </li>
+                                                    <li>
+                                                        <span>40 zl</span> - 2 приложения
+                                                    </li>
+                                                    <li>
+                                                        <span>50 zl</span> - 3 приложения
+                                                    </li>
+                                                </ul>
+                                                <span class="options__time">
 														Аренда в <strong>день</strong>
 													</span>
-													<ul class="options__list flex-c">
-														<li>
-															<span>15 zl</span>
-															- спортивный велосипед
-														</li>
-														<li>
-															<span>30 zl</span>
-															- электровелосипед
-														</li>
-														<li>
-															<span>40 zl</span>
-															- электровелосипед +
-														</li>
-													</ul>
-													<div class="options__btn g-button">
-														<a href="#">
-															Подключить
-														</a>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="splide__slide">
-											<div class="options__item-wrap">
-												<div class="options__item flex-c">
-													<h3 class="g-title g-title--h3">
-														Standard +
-													</h3>
-													<span class="options__payment">Выплата раз в неделю</span>
-													<span class="options__time">Комиссия за <strong>день</strong>
+                                                <ul class="options__list flex-c">
+                                                    <li>
+                                                        <span>15 zl</span>
+                                                        - спортивный велосипед
+                                                    </li>
+                                                    <li>
+                                                        <span>30 zl</span>
+                                                        - электровелосипед
+                                                    </li>
+                                                    <li>
+                                                        <span>40 zl</span>
+                                                        - электровелосипед +
+                                                    </li>
+                                                </ul>
+                                                <div class="options__btn g-button">
+                                                    <a href="#">
+                                                        Подключить
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="options__item-wrap">
+                                            <div class="options__item flex-c">
+                                                <h3 class="g-title g-title--h3">
+                                                    Standard +
+                                                </h3>
+                                                <span class="options__payment">Выплата каждый день</span>
+                                                <span class="options__time">Комиссия за <strong>день</strong>
 													</span>
-													<ul class="options__list flex-c">
-														<li>
-															<span>30 zl</span>
-															- 1 приложение
-														</li>
-														<li>
-															<span>40 zl</span> - 2 приложения
-														</li>
-														<li>
-															<span>50 zl</span> - 3 приложения
-														</li>
-													</ul>
-													<span class="options__time">
+                                                <ul class="options__list flex-c">
+                                                    <li>
+                                                        <span>15 zl</span> - неограниченное количество приложений
+                                                    </li>
+                                                    <li>
+                                                        <span></span>
+                                                    </li>
+                                                    <!--														<li>-->
+                                                    <!--															<span></span>-->
+                                                    <!--														</li>-->
+                                                </ul>
+                                                <span class="options__time">
 														Аренда в <strong>день</strong>
 													</span>
-													<ul class="options__list flex-c">
-														<li>
-															<span>15 zl</span>
-															- спортивный велосипед
-														</li>
-														<li>
-															<span>30 zl</span>
-															- электровелосипед
-														</li>
-														<li>
-															<span>40 zl</span>
-															- электровелосипед +
-														</li>
-													</ul>
-													<div class="options__btn g-button">
-														<a href="#">
-															Подключить
-														</a>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="splide__slide">
-											<div class="options__item-wrap">
-												<div class="options__item flex-c">
-													<h3 class="g-title g-title--h3">
-														Premium
-													</h3>
-													<span class="options__payment">Выплата раз в неделю</span>
-													<span class="options__time">Комиссия за <strong>день</strong>
+                                                <ul class="options__list flex-c">
+                                                    <li>
+                                                        <span>15 zl</span>
+                                                        - спортивный велосипед
+                                                    </li>
+                                                    <li>
+                                                        <span>30 zl</span>
+                                                        - электровелосипед
+                                                    </li>
+                                                    <li>
+                                                        <span>40 zl</span>
+                                                        - электровелосипед +
+                                                    </li>
+                                                </ul>
+                                                <div class="options__btn g-button">
+                                                    <a href="#">
+                                                        Подключить
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="options__item-wrap">
+                                            <div class="options__item flex-c">
+                                                <h3 class="g-title g-title--h3">
+                                                    Premium
+                                                </h3>
+                                                <span class="options__payment">Выплата каждый день</span>
+                                                <span class="options__time">Комиссия за <strong>день</strong>
 													</span>
-													<ul class="options__list flex-c">
-														<li>
-															<span>30 zl</span>
-															- 1 приложение
-														</li>
-														<li>
-															<span>40 zl</span> - 2 приложения
-														</li>
-														<li>
-															<span>50 zl</span> - 3 приложения
-														</li>
-													</ul>
-													<span class="options__time">
+                                                <ul class="options__list flex-c">
+                                                    <li>
+                                                        <span>20 zl</span> - неограниченное количество приложений
+                                                    </li>
+                                                    <li>
+                                                        <span>Быстрый старт</span>
+                                                    </li>
+                                                    <!--														<li>-->
+                                                    <!--															<span></span>-->
+                                                    <!--														</li>-->
+                                                </ul>
+                                                <span class="options__time">
 														Аренда в <strong>день</strong>
 													</span>
-													<ul class="options__list flex-c">
-														<li>
-															<span>15 zl</span>
-															- спортивный велосипед
-														</li>
-														<li>
-															<span>30 zl</span>
-															- электровелосипед
-														</li>
-														<li>
-															<span>40 zl</span>
-															- электровелосипед +
-														</li>
-													</ul>
-													<div class="options__btn g-button">
-														<a href="#">
-															Подключить
-														</a>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+                                                <ul class="options__list flex-c">
+                                                    <li>
+                                                        <span>15 zl</span>
+                                                        - спортивный велосипед
+                                                    </li>
+                                                    <li>
+                                                        <span>30 zl</span>
+                                                        - электровелосипед
+                                                    </li>
+                                                    <li>
+                                                        <span>40 zl</span>
+                                                        - электровелосипед +
+                                                    </li>
+                                                </ul>
+                                                <div class="options__btn g-button">
+                                                    <a href="#">
+                                                        Подключить
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="options__item-wrap">
+                                            <div class="options__item flex-c">
+                                                <h3 class="g-title g-title--h3">
+                                                    xPress Delivery
+                                                </h3>
+                                                <span class="options__payment">Выплата раз в 2 недели</span>
+                                                <span class="options__time">Комиссия за <strong>2 недели</strong>
+													</span>
+                                                <ul class="options__list flex-c">
+                                                    <li>
+                                                        <span>30 zl</span> - xPress Delivery
+                                                    </li>
+                                                    <li>
+                                                        <span></span>
+                                                    </li>
+                                                    <li>
+                                                        <span></span>
+                                                    </li>
+                                                </ul>
+                                                <span class="options__time">
+														Аренда в <strong>день</strong>
+													</span>
+                                                <ul class="options__list flex-c">
+                                                    <li>
+                                                        <span>15 zl</span>
+                                                        - спортивный велосипед
+                                                    </li>
+                                                    <li>
+                                                        <span>30 zl</span>
+                                                        - электровелосипед
+                                                    </li>
+                                                    <li>
+                                                        <span>40 zl</span>
+                                                        - электровелосипед +
+                                                    </li>
+                                                </ul>
+                                                <div class="options__btn g-button">
+                                                    <a href="#">
+                                                        Подключить
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-				<!-- Partners -->
-				<section class="partners section-mb" id="partners">
-					<div class="container">
-						<div class="partners__inner flex-c">
-							<h2 class="g-title g-title--h2">
-								Наши партнёры
-							</h2>
-							<div class="partners__slider splide splide3">
-								<div class="splide__track">
-									<ul class="splide__list">
-										<li class="splide__slide">
-											<img alt="Bolt" height="118" src="/static/img/partners/bolt.svg" width="118">
-										</li>
-										<li class="splide__slide">
-											<img alt="Uber" height="118" src="/static/img/partners/uber.svg" width="118">
-										</li>
-										<li class="splide__slide">
-											<img alt="Bolt Food" height="118" src="/static/img/partners/bolt_food.svg"
-												width="118">
-										</li>
-										<li class="splide__slide">
-											<img alt="Uber Eats" height="118" src="/static/img/partners/uber_eats.svg"
-												width="118">
-										</li>
-										<li class="splide__slide">
-											<img alt="Free Now" height="118" src="/static/img/partners/free_now.svg"
-												width="118">
-										</li>
-										<li class="splide__slide">
-											<img alt="Stuart" height="118" src="/static/img/partners/stuart.svg" width="118">
-										</li>
-										<li class="splide__slide">
-											<img alt="Xpress Delivery" height="118"
-												src="/static/img/partners/xpress_delivery.svg" width="118">
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="g-button">
-								<a href="#">
-									Регистрация
-								</a>
-							</div>
-						</div>
-					</div>
-				</section>
+            <!-- Partners -->
+            <section class="partners section-mb" id="partners">
+                <div class="container">
+                    <div class="partners__inner flex-c">
+                        <h2 class="g-title g-title--h2">
+                            Наши партнёры
+                        </h2>
+                        <div class="partners__slider splide splide3">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img alt="Bolt" height="118" src="/static/img/partners/bolt.svg" width="118">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img alt="Uber" height="118" src="/static/img/partners/uber.svg" width="118">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img alt="Bolt Food" height="118" src="/static/img/partners/bolt_food.svg"
+                                             width="118">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img alt="Uber Eats" height="118" src="/static/img/partners/uber_eats.svg"
+                                             width="118">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img alt="Free Now" height="118" src="/static/img/partners/free_now.svg"
+                                             width="118">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img alt="Stuart" height="118" src="/static/img/partners/stuart.svg"
+                                             width="118">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img alt="Xpress Delivery" height="118"
+                                             src="/static/img/partners/xpress_delivery.svg" width="118">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="g-button">
+                            <a href="#">
+                                Регистрация
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-				<!-- Benefits -->
-				<section class="benefits section-mb">
-					<div class="container">
-						<div class="benefits__inner flex-c">
-							<h2 class="g-title g-title--h2">Преимущества работы с нами</h2>
-							<div class="benefits__item">
-								<div class="benefits__picture flex">
-									<img alt="Benefits" loading="lazy" src="/static/img/benefits/payments.webp">
-								</div>
-								<div class="benefits__text">
-									<h3 class="g-title g-title--h3">
-										Ежедневные выплаты
-									</h3>
-									<p class="g-text">
-										Вы будете иметь возможность выбирать наиболее подходящие для вас условия выплат
-										как в ежедневном формате так и раз в неделю. Мы гарантируем своевременные
-										и полные выплаты от фирм партнёров.
-									</p>
-								</div>
-							</div>
-							<div class="benefits__item">
-								<div class="benefits__text">
-									<h3 class="g-title g-title--h3">
-										Рекомендованный партнёр
-									</h3>
-									<p class="g-text">
-										Мы являемся проверенным и многолетним партнёром таких транспортных компаний, как
-										Uber, Uber Eats, Bolt, Bolt Food, Free
-										now, Glovo, Opti taxi, Wolt, а также Glob taxi. С приложениями Uber и Bolt мы
-										сотрудничаем с самого начала их
-										деятельности в Польше. У нас есть необходимый опыт и знания в транспортной
-										отрасли.
-									</p>
-								</div>
-								<div class="benefits__picture benefits__picture--right flex">
-									<img alt="Benefits" loading="lazy" src="/static/img/benefits/2.webp">
-								</div>
-							</div>
-							<div class="benefits__item">
-								<div class="benefits__picture flex">
-									<img alt="Benefits" loading="lazy" src="/static/img/benefits/support.webp">
-								</div>
-								<div class="benefits__text">
-									<h3 class="g-title g-title--h3">
-										Поддержка 24/7
-									</h3>
-									<p class="g-text">
-										Наша компания имеет собственный отдел технической поддержки - залог того, что
-										Вы
-										никогда не останетесь без нашей помощи в
-										решении любых вопросов.
-									</p>
-								</div>
-							</div>
-							<div class="benefits__item">
-								<div class="benefits__text">
-									<h3 class="g-title g-title--h3">
-										Легальное трудоустройство
-									</h3>
-									<p class="g-text">
-										Наша компания имеет собственный отдел технической поддержки. Мы
-									</p>
-								</div>
-								<div class="benefits__picture flex">
-									<img alt="Benefits" loading="lazy" src="/static/img/benefits/contract.webp">
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+            <!-- Benefits -->
+            <section class="benefits section-mb">
+                <div class="container">
+                    <div class="benefits__inner flex-c">
+                        <h2 class="g-title g-title--h2">Преимущества работы с нами</h2>
+                        <div class="benefits__item">
+                            <div class="benefits__picture flex">
+                                <img alt="Benefits" loading="lazy" src="/static/img/benefits/payments.webp">
+                            </div>
+                            <div class="benefits__text">
+                                <h3 class="g-title g-title--h3">
+                                    Ежедневные выплаты
+                                </h3>
+                                <p class="g-text">
+                                    У вас будет возможность выбирать наиболее подходящие для вас условия выплат
+                                    как в ежедневном формате так и раз в неделю. Мы гарантируем своевременные
+                                    и полные выплаты от фирм партнёров.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits__item">
+                            <div class="benefits__text">
+                                <h3 class="g-title g-title--h3">
+                                    Рекомендованный партнёр
+                                </h3>
+                                <p class="g-text">
+                                    Мы являемся проверенным и многолетним партнёром таких транспортных компаний, как
+                                    Uber, Uber Eats, Bolt, Bolt Food, Free
+                                    Now, Stuart, а также xPress Delivery. С приложениями Uber и Bolt мы
+                                    сотрудничаем с самого начала их
+                                    деятельности в Польше. У нас есть необходимый опыт и знания в транспортной
+                                    отрасли.
+                                </p>
+                            </div>
+                            <div class="benefits__picture benefits__picture--right flex">
+                                <img alt="Benefits" loading="lazy" src="/static/img/benefits/2.webp">
+                            </div>
+                        </div>
+                        <div class="benefits__item">
+                            <div class="benefits__picture flex">
+                                <img alt="Benefits" loading="lazy" src="/static/img/benefits/support.webp">
+                            </div>
+                            <div class="benefits__text">
+                                <h3 class="g-title g-title--h3">
+                                    Поддержка 24/7
+                                </h3>
+                                <p class="g-text">
+                                    Наша компания имеет собственный отдел технической поддержки - залог того, что
+                                    Вы
+                                    никогда не останетесь без нашей помощи в
+                                    решении любых вопросов.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits__item">
+                            <div class="benefits__text">
+                                <h3 class="g-title g-title--h3">
+                                    Легальное трудоустройство
+                                </h3>
+                                <p class="g-text">
+                                    В нашей компании есть отдел занимающийся всеми юридическими вопросами. Наши юристы с радостью помогут вам в
+									открытии фирмы, оформлении Карты Побыта, а так же получении разрешения на работу в Польше.
+                                </p>
+                            </div>
+                            <div class="benefits__picture flex">
+                                <img alt="Benefits" loading="lazy" src="/static/img/benefits/contract.webp">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-				<!-- Contact -->
-				<section class="contact" id="contact">
-					<div class="container">
-						<div class="contact__inner">
-							<h2 class="g-title g-title--h2">
-								Свяжитесь с нами!
-							</h2>
-							<div class="contact__items">
-								<div class="contact__item">
-									<div class="contact__item-text">
-										<h4 class="g-title g-title--h4">Warsawa</h4>
-										<ul class="contact__item-list flex-c">
-											<li>
-												<a class="contact__item-address"
-													href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
-													<strong>Адрес:</strong> Lędzka 44, 01-446</a>
-											</li>
-											<li class="contact__item-shedule">
-												<strong>
-													График:
-												</strong>
-												пн. - пт. 10:00 - 17:00
-											</li>
-											<li>
-												<a href="tel:+48606890410">
-													<strong>Офис:</strong>
-													+48 606 890 410</a>
-											</li>
-											<li>
-												<a href="tel:+48787598910">
-													<strong>
-														Доп. номер:
-													</strong>
-													+48 787 598 910
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="contact__item">
-									<div class="contact__item-text">
-										<h4 class="g-title g-title--h4">Kraków</h4>
-										<ul class="contact__item-list flex-c">
-											<li>
-												<a class="contact__item-address"
-													href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
-													<strong>Адрес:</strong> Lędzka 44, 01-446</a>
-											</li>
-											<li class="contact__item-shedule">
-												<strong>
-													График:
-												</strong>
-												пн. - пт. 10:00 - 17:00
-											</li>
-											<li>
-												<a href="tel:+48606890410">
-													<strong>Офис:</strong>
-													+48 606 890 410</a>
-											</li>
-											<li>
-												<a href="tel:+48787598910">
-													<strong>
-														Доп. номер:
-													</strong>
-													+48 787 598 910
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="contact__item">
-									<div class="contact__item-text">
-										<h4 class="g-title g-title--h4">Gdańsk</h4>
-										<ul class="contact__item-list flex-c">
-											<li>
-												<a class="contact__item-address"
-													href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
-													<strong>Адрес:</strong> Lędzka 44, 01-446</a>
-											</li>
-											<li class="contact__item-shedule">
-												<strong>
-													График:
-												</strong>
-												пн. - пт. 10:00 - 17:00
-											</li>
-											<li>
-												<a href="tel:+48606890410">
-													<strong>Офис:</strong>
-													+48 606 890 410</a>
-											</li>
-											<li>
-												<a href="tel:+48787598910">
-													<strong>
-														Доп. номер:
-													</strong>
-													+48 787 598 910
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="contact__item">
-									<div class="contact__item-text">
-										<h4 class="g-title g-title--h4">Poznań</h4>
-										<ul class="contact__item-list flex-c">
-											<li>
-												<a class="contact__item-address"
-													href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
-													<strong>Адрес:</strong> Lędzka 44, 01-446</a>
-											</li>
-											<li class="contact__item-shedule">
-												<strong>
-													График:
-												</strong>
-												пн. - пт. 10:00 - 17:00
-											</li>
-											<li>
-												<a href="tel:+48606890410">
-													<strong>Офис:</strong>
-													+48 606 890 410</a>
-											</li>
-											<li>
-												<a href="tel:+48787598910">
-													<strong>
-														Доп. номер:
-													</strong>
-													+48 787 598 910
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="contact__item">
-									<div class="contact__item-text">
-										<h4 class="g-title g-title--h4">Wrocław</h4>
-										<ul class="contact__item-list flex-c">
-											<li>
-												<a class="contact__item-address"
-													href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
-													<strong>Адрес:</strong> Lędzka 44, 01-446</a>
-											</li>
-											<li class="contact__item-shedule">
-												<strong>
-													График:
-												</strong>
-												пн. - пт. 10:00 - 17:00
-											</li>
-											<li>
-												<a href="tel:+48606890410">
-													<strong>Офис:</strong>
-													+48 606 890 410</a>
-											</li>
-											<li>
-												<a href="tel:+48787598910">
-													<strong>
-														Доп. номер:
-													</strong>
-													+48 787 598 910
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="contact__item">
-									<div class="contact__item-text">
-										<h4 class="g-title g-title--h4">Radom</h4>
-										<ul class="contact__item-list flex-c">
-											<li>
-												<a class="contact__item-address"
-													href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
-													<strong>Адрес:</strong> Lędzka 44, 01-446</a>
-											</li>
-											<li class="contact__item-shedule">
-												<strong>
-													График:
-												</strong>
-												пн. - пт. 10:00 - 17:00
-											</li>
-											<li>
-												<a href="tel:+48606890410">
-													<strong>Офис:</strong>
-													+48 606 890 410</a>
-											</li>
-											<li>
-												<a href="tel:+48787598910">
-													<strong>
-														Доп. номер:
-													</strong>
-													+48 787 598 910
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="contact__item">
-									<div class="contact__item-text">
-										<h4 class="g-title g-title--h4">Kielce</h4>
-										<ul class="contact__item-list flex-c">
-											<li>
-												<a class="contact__item-address"
-													href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
-													<strong>Адрес:</strong> Lędzka 44, 01-446</a>
-											</li>
-											<li class="contact__item-shedule">
-												<strong>
-													График:
-												</strong>
-												пн. - пт. 10:00 - 17:00
-											</li>
-											<li>
-												<a href="tel:+48606890410">
-													<strong>Офис:</strong>
-													+48 606 890 410</a>
-											</li>
-											<li>
-												<a href="tel:+48787598910">
-													<strong>
-														Доп. номер:
-													</strong>
-													+48 787 598 910
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="contact__item">
-									<div class="contact__item-text">
-										<h4 class="g-title g-title--h4">Łódź</h4>
-										<ul class="contact__item-list flex-c">
-											<li>
-												<a class="contact__item-address"
-													href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
-													<strong>Адрес:</strong> Lędzka 44, 01-446</a>
-											</li>
-											<li class="contact__item-shedule">
-												<strong>
-													График:
-												</strong>
-												пн. - пт. 10:00 - 17:00
-											</li>
-											<li>
-												<a href="tel:+48606890410">
-													<strong>Офис:</strong>
-													+48 606 890 410</a>
-											</li>
-											<li>
-												<a href="tel:+48787598910">
-													<strong>
-														Доп. номер:
-													</strong>
-													+48 787 598 910
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="contact__item">
-									<div class="contact__item-text">
-										<h4 class="g-title g-title--h4">Katowice</h4>
-										<ul class="contact__item-list flex-c">
-											<li>
-												<a class="contact__item-address"
-													href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
-													<strong>Адрес:</strong> Lędzka 44, 01-446</a>
-											</li>
-											<li class="contact__item-shedule">
-												<strong>
-													График:
-												</strong>
-												пн. - пт. 10:00 - 17:00
-											</li>
-											<li>
-												<a href="tel:+48606890410">
-													<strong>Офис:</strong>
-													+48 606 890 410</a>
-											</li>
-											<li>
-												<a href="tel:+48787598910">
-													<strong>
-														Доп. номер:
-													</strong>
-													+48 787 598 910
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="contact__item">
-									<div class="contact__item-text">
-										<h4 class="g-title g-title--h4">Praga</h4>
-										<ul class="contact__item-list flex-c">
-											<li>
-												<a class="contact__item-address"
-													href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
-													<strong>Адрес:</strong> Lędzka 44, 01-446</a>
-											</li>
-											<li class="contact__item-shedule">
-												<strong>
-													График:
-												</strong>
-												пн. - пт. 10:00 - 17:00
-											</li>
-											<li>
-												<a href="tel:+48606890410">
-													<strong>Офис:</strong>
-													+48 606 890 410</a>
-											</li>
-											<li>
-												<a href="tel:+48787598910">
-													<strong>
-														Доп. номер:
-													</strong>
-													+48 787 598 910
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+            <!-- Contact -->
+            <section class="contact" id="contact">
+                <div class="container">
+                    <div class="contact__inner">
+                        <h2 class="g-title g-title--h2">
+                            Свяжитесь с нами!
+                        </h2>
+                        <div class="contact__items">
+                            <div class="contact__item">
+                                <div class="contact__item-text">
+                                    <h4 class="g-title g-title--h4">Warszawa</h4>
+                                    <ul class="contact__item-list flex-c">
+                                        <li>
+                                            <a class="contact__item-address"
+                                               href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
+                                                <strong>Адрес:</strong> Lędzka 44, 01-446</a>
+                                        </li>
+                                        <li class="contact__item-shedule">
+                                            <strong>
+                                                График:
+                                            </strong>
+                                            пн. - пт. 10:00 - 17:00
+											сб. 10:00-14:00
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48606890410">
+                                                <strong>Офис:</strong>
+                                                +48 606 890 410</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48787598910">
+                                                <strong>
+                                                    Доп. номер:
+                                                </strong>
+                                                +48 787 598 910
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__item-text">
+                                    <h4 class="g-title g-title--h4">Kraków</h4>
+                                    <ul class="contact__item-list flex-c">
+                                        <li>
+                                            <a class="contact__item-address"
+                                               href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
+                                                <strong>Адрес:</strong> Lędzka 44, 01-446</a>
+                                        </li>
+                                        <li class="contact__item-shedule">
+                                            <strong>
+                                                График:
+                                            </strong>
+                                            пн. - пт. 10:00 - 17:00
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48606890410">
+                                                <strong>Офис:</strong>
+                                                +48 606 890 410</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48787598910">
+                                                <strong>
+                                                    Доп. номер:
+                                                </strong>
+                                                +48 787 598 910
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__item-text">
+                                    <h4 class="g-title g-title--h4">Gdańsk</h4>
+                                    <ul class="contact__item-list flex-c">
+                                        <li>
+                                            <a class="contact__item-address"
+                                               href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
+                                                <strong>Адрес:</strong> Lędzka 44, 01-446</a>
+                                        </li>
+                                        <li class="contact__item-shedule">
+                                            <strong>
+                                                График:
+                                            </strong>
+                                            пн. - пт. 10:00 - 17:00
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48606890410">
+                                                <strong>Офис:</strong>
+                                                +48 606 890 410</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48787598910">
+                                                <strong>
+                                                    Доп. номер:
+                                                </strong>
+                                                +48 787 598 910
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__item-text">
+                                    <h4 class="g-title g-title--h4">Poznań</h4>
+                                    <ul class="contact__item-list flex-c">
+                                        <li>
+                                            <a class="contact__item-address"
+                                               href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
+                                                <strong>Адрес:</strong> Lędzka 44, 01-446</a>
+                                        </li>
+                                        <li class="contact__item-shedule">
+                                            <strong>
+                                                График:
+                                            </strong>
+                                            пн. - пт. 10:00 - 17:00
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48606890410">
+                                                <strong>Офис:</strong>
+                                                +48 606 890 410</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48787598910">
+                                                <strong>
+                                                    Доп. номер:
+                                                </strong>
+                                                +48 787 598 910
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__item-text">
+                                    <h4 class="g-title g-title--h4">Wrocław</h4>
+                                    <ul class="contact__item-list flex-c">
+                                        <li>
+                                            <a class="contact__item-address"
+                                               href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
+                                                <strong>Адрес:</strong> Lędzka 44, 01-446</a>
+                                        </li>
+                                        <li class="contact__item-shedule">
+                                            <strong>
+                                                График:
+                                            </strong>
+                                            пн. - пт. 10:00 - 17:00
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48606890410">
+                                                <strong>Офис:</strong>
+                                                +48 606 890 410</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48787598910">
+                                                <strong>
+                                                    Доп. номер:
+                                                </strong>
+                                                +48 787 598 910
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__item-text">
+                                    <h4 class="g-title g-title--h4">Radom</h4>
+                                    <ul class="contact__item-list flex-c">
+                                        <li>
+                                            <a class="contact__item-address"
+                                               href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
+                                                <strong>Адрес:</strong> Lędzka 44, 01-446</a>
+                                        </li>
+                                        <li class="contact__item-shedule">
+                                            <strong>
+                                                График:
+                                            </strong>
+                                            пн. - пт. 10:00 - 17:00
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48606890410">
+                                                <strong>Офис:</strong>
+                                                +48 606 890 410</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48787598910">
+                                                <strong>
+                                                    Доп. номер:
+                                                </strong>
+                                                +48 787 598 910
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__item-text">
+                                    <h4 class="g-title g-title--h4">Kielce</h4>
+                                    <ul class="contact__item-list flex-c">
+                                        <li>
+                                            <a class="contact__item-address"
+                                               href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
+                                                <strong>Адрес:</strong> Lędzka 44, 01-446</a>
+                                        </li>
+                                        <li class="contact__item-shedule">
+                                            <strong>
+                                                График:
+                                            </strong>
+                                            пн. - пт. 10:00 - 17:00
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48606890410">
+                                                <strong>Офис:</strong>
+                                                +48 606 890 410</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48787598910">
+                                                <strong>
+                                                    Доп. номер:
+                                                </strong>
+                                                +48 787 598 910
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__item-text">
+                                    <h4 class="g-title g-title--h4">Łódź</h4>
+                                    <ul class="contact__item-list flex-c">
+                                        <li>
+                                            <a class="contact__item-address"
+                                               href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
+                                                <strong>Адрес:</strong> Lędzka 44, 01-446</a>
+                                        </li>
+                                        <li class="contact__item-shedule">
+                                            <strong>
+                                                График:
+                                            </strong>
+                                            пн. - пт. 10:00 - 17:00
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48606890410">
+                                                <strong>Офис:</strong>
+                                                +48 606 890 410</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48787598910">
+                                                <strong>
+                                                    Доп. номер:
+                                                </strong>
+                                                +48 787 598 910
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__item-text">
+                                    <h4 class="g-title g-title--h4">Katowice</h4>
+                                    <ul class="contact__item-list flex-c">
+                                        <li>
+                                            <a class="contact__item-address"
+                                               href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
+                                                <strong>Адрес:</strong> Lędzka 44, 01-446</a>
+                                        </li>
+                                        <li class="contact__item-shedule">
+                                            <strong>
+                                                График:
+                                            </strong>
+                                            пн. - пт. 10:00 - 17:00
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48606890410">
+                                                <strong>Офис:</strong>
+                                                +48 606 890 410</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48787598910">
+                                                <strong>
+                                                    Доп. номер:
+                                                </strong>
+                                                +48 787 598 910
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <div class="contact__item-text">
+                                    <h4 class="g-title g-title--h4">Praga</h4>
+                                    <ul class="contact__item-list flex-c">
+                                        <li>
+                                            <a class="contact__item-address"
+                                               href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
+                                                <strong>Адрес:</strong> Lędzka 44, 01-446</a>
+                                        </li>
+                                        <li class="contact__item-shedule">
+                                            <strong>
+                                                График:
+                                            </strong>
+                                            пн. - пт. 10:00 - 17:00
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48606890410">
+                                                <strong>Офис:</strong>
+                                                +48 606 890 410</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+48787598910">
+                                                <strong>
+                                                    Доп. номер:
+                                                </strong>
+                                                +48 787 598 910
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-			</div>
-		</main>
+        </div>
+    </main>
 
-		<!-- Callback box -->
-		<div class="callback">
-			<div class="callback__inner">
-				<span class="callback__close"></span>
-				<div class="callback__logo logo flex">
-					<img alt="Bez Problem Service" src="./static/img/icons/logo.svg">
-					<p><span class="logo__bold">Bez</span>Problem</p>
-				</div>
-				<div class="callback__form">
-					<form action="#">
-						<input placeholder="Ваше имя" required type="text">
-						<input name="phone" placeholder="Ваш телефон" required type="tel">
-						<input type="submit" value="Отправить">
-					</form>
-				</div>
-			</div>
-		</div>
+    <!-- Callback box -->
+    <div class="callback">
+        <div class="callback__inner">
+            <span class="callback__close"></span>
+            <div class="callback__logo logo flex">
+                <img alt="Bez Problem Service" src="/static/img/icons/logo.svg">
+                <p><span class="logo__bold">Bez</span>Problem</p>
+            </div>
+            <div class="callback__form">
+                <form name="requestCall" method="post" th:action="@{/call}">
+                    <input name="credentials" placeholder="Ваше имя" required type="text">
+                    <input name="phoneNumber" placeholder="Ваш телефон" required type="tel">
+                    <input type="submit" value="Отправить">
+                </form>
+            </div>
+        </div>
+    </div>
 
-		<div class="overlay"></div>
-		<div class="messengers">
-	<div class="messengers__btn flex global-btn">
-		<span class="messengers__icon"></span>
-	</div>
-	<ul class="messengers__list flex-c global-div">
-		<li>
-			<div class="messengers__link s-telegram messengers__telegram global-btn">
-			</div>
-			<ul class="messengers__telegram-list global-div">
-				<li class="global-btn">
-					Нажмите на ссылку для перехода в чат
-				</li>
-				<li>
-					<a href="https://tele.click/rav_vitalii" target="_blank">Warsaw</a>
-				</li>
-				<li>
-					<a href="#">Gdańsk</a>
-				</li>
-				<li>
-					<a href="#">Wrocław</a>
-				</li>
-				<li>
-					<a href="#">Kielce</a>
-				</li>
-				<li>
-					<a href="#">Katowice</a>
-				</li>
-				<li>
-					<a href="#">Kraków</a>
-				</li>
-				<li>
-					<a href="#">Poznań</a>
-				</li>
-				<li>
-					<a href="#">Radom</a>
-				</li>
-				<li>
-					<a href="#">Łódź</a>
-				</li>
-				<!-- <li>
-					<a href="#">Praga</a>
-				</li>
-				<li>
-					<a href="#">Praga</a>
-				</li>
-				<li>
-					<a href="#">Praga</a>
-				</li>
-				<li>
-					<a href="#">Praga</a>
-				</li>
-				<li>
-					<a href="#">Praga</a>
-				</li>
-				<li>
-					<a href="#">Praga</a>
-				</li>
-				<li>
-					<a href="#">Praga</a>
-				</li> -->
-			</ul>
-		</li>
-		<li>
-			<a class="messengers__link s-instagram" href="#">
-				<span>Instagram</span>
-			</a>
-		</li>
-		<li>
-			<a class="messengers__link s-facebook" href="#">
-				<span>Facebook</span>
-			</a>
-		</li>
-		<li>
-			<a class="messengers__link s-tiktok" href="#">
-				<span>TikTok</span>
-			</a>
-		</li>
-		<li>
-			<a class="messengers__link s-phone" href="#">
-				<span>Call Us</span>
-			</a>
-		</li>
-	</ul>
+    <div class="overlay"></div>
+    <div class="messengers">
+        <div class="messengers__btn flex global-btn">
+            <span class="messengers__icon"></span>
+        </div>
+        <ul class="messengers__list flex-c global-div">
+            <li>
+                <div class="messengers__link s-telegram messengers__telegram global-btn">
+                </div>
+                <ul class="messengers__telegram-list global-div">
+                    <li class="global-btn">
+                        Нажмите на ссылку для перехода в чат
+                    </li>
+                    <li>
+                        <a href="https://tele.click/rav_vitalii" target="_blank">Warsaw</a>
+                    </li>
+                    <li>
+                        <a href="#">Gdańsk</a>
+                    </li>
+                    <li>
+                        <a href="#">Wrocław</a>
+                    </li>
+                    <li>
+                        <a href="#">Kielce</a>
+                    </li>
+                    <li>
+                        <a href="#">Katowice</a>
+                    </li>
+                    <li>
+                        <a href="#">Kraków</a>
+                    </li>
+                    <li>
+                        <a href="#">Poznań</a>
+                    </li>
+                    <li>
+                        <a href="#">Radom</a>
+                    </li>
+                    <li>
+                        <a href="#">Łódź</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#">Praga</a>
+                    </li>
+                    <li>
+                        <a href="#">Praga</a>
+                    </li>
+                    <li>
+                        <a href="#">Praga</a>
+                    </li>
+                    <li>
+                        <a href="#">Praga</a>
+                    </li>
+                    <li>
+                        <a href="#">Praga</a>
+                    </li>
+                    <li>
+                        <a href="#">Praga</a>
+                    </li>
+                    <li>
+                        <a href="#">Praga</a>
+                    </li> -->
+                </ul>
+            </li>
+            <li>
+                <a class="messengers__link s-instagram" href="#">
+                    <span>Instagram</span>
+                </a>
+            </li>
+            <li>
+                <a class="messengers__link s-facebook" href="#">
+                    <span>Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a class="messengers__link s-tiktok" href="#">
+                    <span>TikTok</span>
+                </a>
+            </li>
+            <li>
+                <a class="messengers__link s-phone" href="#">
+                    <span>Call Us</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner flex">
+                <div class="logo logo-w flex">
+                    <a href="/static">
+                        <img alt="Bez Problem Service" src="/static/img/icons/logo.svg">
+                        <p><span class="logo__bold">Bez</span>Problem</p>
+                    </a>
+                </div>
+                <ul class="footer__list flex">
+                    <li>
+                        <a class="hover-link scroll-to" href="#options">
+                            Тарифы
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover-link scroll-to" href="#partners">
+                            Партнёры
+                        </a>
+                    </li>
+                    <li>
+                        <a class="g-tel" href="tel:+48733833388">
+                            +48733-83-33-88
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </div>
-		<!-- Footer -->
-<footer class="footer">
-	<div class="container">
-		<div class="footer__inner flex">
-			<div class="logo logo-w flex">
-				<a href="/static">
-					<img src="./static/img/icons/logo.svg" alt="Bez Problem Service">
-					<p><span class="logo__bold">Bez</span>Problem</p>
-				</a>
-			</div>
-			<ul class="footer__list flex">
-				<li>
-					<a class="hover-link scroll-to" href="#options">
-						Тарифы
-					</a>
-				</li>
-				<li>
-					<a class="hover-link scroll-to" href="#partners">
-						Партнёры
-					</a>
-				</li>
-				<li>
-					<a class="g-tel" href="tel:+48733833388">
-						+48733-83-33-88
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</footer>
-	</div>
-	<script src="/static/js/splide.min.js"></script>
+<script src="/static/js/splide.min.js"></script>
 <script src="/static/js/splide-extension-auto-scroll.min.js"></script>
 <script src="/static/js/main.js"></script>
 </body>
