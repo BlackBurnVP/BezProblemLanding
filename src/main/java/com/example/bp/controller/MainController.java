@@ -3,6 +3,7 @@ package com.example.bp.controller;
 import com.example.bp.domain.Lead;
 import com.example.bp.repository.LeadRepo;
 import com.example.bp.repository.UserRepo;
+import com.example.bp.service.LeadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,9 @@ public class MainController {
     @Autowired
     LeadRepo leadRepo;
 
+    @Autowired
+    LeadService service;
+
     @GetMapping
     public String main(){
         return "index";
@@ -33,6 +37,7 @@ public class MainController {
         lead.setCreated(new Date());
         lead.setCreatedBy(userRepo.getSystemUser());
         leadRepo.save(lead);
+        service.telegramNotification(lead);
         return "redirect:/";
     }
 }

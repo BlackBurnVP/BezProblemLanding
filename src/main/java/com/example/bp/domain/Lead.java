@@ -15,7 +15,8 @@ public class Lead {
     private String credentials;
     private String phoneNumber;
     private String origin;
-    private String comment;
+
+    private String CallComment;
     private boolean isCalled;
     @ManyToOne
     private User createdBy;
@@ -56,12 +57,12 @@ public class Lead {
         this.origin = origin;
     }
 
-    public String getComment() {
-        return comment;
+    public String getCallComment() {
+        return CallComment;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setCallComment(String callComment) {
+        CallComment = callComment;
     }
 
     public boolean isCalled() {
