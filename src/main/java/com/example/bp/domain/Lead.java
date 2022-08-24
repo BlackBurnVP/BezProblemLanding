@@ -14,6 +14,7 @@ public class Lead {
     private Long id;
     private String credentials;
     private String phoneNumber;
+    @Enumerated(EnumType.STRING)
     private Origins origin;
 
     private String CallComment;
