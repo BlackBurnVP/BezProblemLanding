@@ -426,7 +426,7 @@ document.addEventListener(
 
 						let langIcon = document.querySelector('.lang-icon img');
 						let chosenLang = this.innerHTML.toLowerCase();
-						langIcon.src = `./img/icons/flags/flag-${chosenLang}.svg`;
+						langIcon.src = `/static/img/icons/flags/flag-${chosenLang}.svg`;
 					});
 					b.appendChild(c);
 				}
@@ -465,7 +465,7 @@ document.addEventListener(
 
 			for (let i of langItem) {
 				let chosenLang = i.innerHTML.toLowerCase();
-				i.style.backgroundImage = `url('./img/icons/flags/flag-${chosenLang
+				i.style.backgroundImage = `url('/static/img/icons/flags/flag-${chosenLang
 				}.svg')`;
 
 				document.addEventListener("click", closeAllSelect);
