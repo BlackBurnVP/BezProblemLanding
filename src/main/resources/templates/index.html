@@ -13,6 +13,7 @@
     <link data-n-head="ssr" href="/static/img/favicon.svg" rel="icon" type="image/svg+xml">
     <link href="/static/css/splide.min.css" rel="stylesheet">
     <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/css/lang_style.css" rel="stylesheet">
     <link href="/static/css/responsive.css" rel="stylesheet">
 </head>
 <!-- Google tag (gtag.js) -->
@@ -23,6 +24,44 @@
     gtag('js', new Date());
 
     gtag('config', 'G-7GX8JCY2XJ');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i <ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        function checkCookie() {
+            let locale = getCookie("org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE");
+            if (locale != "") {
+                let selectLLL = document.querySelector(".select-selected");
+                selectLLL.innerHTML=locale;
+
+                let langIcon = document.querySelector('.lang-icon img');
+                let chosenLang = selectLLL.innerHTML.toLowerCase();
+                langIcon.src = `/static/img/icons/flags/flag-${chosenLang}.svg`
+            } else {
+                // locale = prompt("Please enter your name:", "");
+                // if (locale != "" && locale != null) {
+                //     setCookie("username", locale, 365);
+                // }
+            }
+        }
+        checkCookie();
+    });
 </script>
 
 <body>
@@ -51,17 +90,17 @@
                 <nav class="navigation">
                     <ul class="navigation__list">
                         <li class="navigation__list-item">
-                            <a class="hover-link scroll-to" href="#options">
+                            <a class="hover-link scroll-to" href="#options" th:utext="#{menu.fees}">
                                 Тарифы
                             </a>
                         </li>
                         <li class="navigation__list-item">
-                            <a class="hover-link scroll-to" href="#partners">
+                            <a class="hover-link scroll-to" href="#partners" th:utext="#{menu.partners}">
                                 Партнёры
                             </a>
                         </li>
                         <li class="navigation__list-item">
-                            <a class="hover-link scroll-to" href="#contact">
+                            <a class="hover-link scroll-to" href="#contact" th:utext="#{menu.contact}">
                                 Контакты
                             </a>
                         </li>
@@ -69,6 +108,28 @@
                             <a class="g-tel" href="tel:+48733833388">
                                 +48 733-833-388
                             </a>
+                        </li>
+<!--                        <li>-->
+<!--                            <select class="locales" id="locales">-->
+<!--                                <option value=""></option>-->
+<!--                                <option value="en" th:selected="${param.lang!=null} and ${param.lang[0] == 'en'}"></option>-->
+<!--                                <option value="ru" th:selected="${param.lang!=null} and ${param.lang[0] == 'ru'}" th:utext="#{lang.ru}"></option>-->
+<!--                            </select>-->
+<!--                        </li>-->
+                        <li class="navigation__list-item">
+                            <div class="header__lang">
+                                <i class="lang-icon">
+                                    <img src="/static/img/icons/flags/flag-en.svg" alt="Site language">
+                                </i>
+                                <div class="custom-select">
+                                    <select class="site-language locales" id="locales">
+                                        <option value="en">en</option>
+                                        <option value="ru">ru</option>
+                                        <option value="pl">pl</option>
+                                        <option value="pl">cz</option>
+                                    </select>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </nav>
@@ -102,7 +163,7 @@
                             <h1 class="g-title g-title--h1">
                                 BezProblem Partner
                             </h1>
-                            <p>
+                            <p th:utext="#{header}">
                                 Работа курьером, работа в такси, легализация пребывания в Польше!
                             </p>
                             <div class="video flex">
@@ -110,14 +171,14 @@
                                     <div>
                                         <span></span>
                                     </div>
-                                    <p>Посмотрите видео о нашей компании</p>
+                                    <p th:utext="#{video}">Посмотрите видео о нашей компании</p>
                                 </div>
                                 <div class="video__player">
                                     <video controls src=""></video>
                                 </div>
                             </div>
                             <div class="g-button">
-                                <a href="#">
+                                <a href="#" th:utext="#{call_request}">
                                     Закажите обратный звонок
                                 </a>
                             </div>
@@ -154,31 +215,31 @@
                                     <li class="splide__slide">
                                         <div class="intro__counter-item">
                                             <div class="counter" data-target="871"></div>
-                                            <span>Машин</span>
+                                            <span th:utext="#{counter.car}">Машин</span>
                                         </div>
                                     </li>
                                     <li class="splide__slide">
                                         <div class="intro__counter-item">
                                             <div class="counter" data-target="571"></div>
-                                            <span>Велосипедов</span>
+                                            <span th:utext="#{counter.bicycles}">Велосипедов</span>
                                         </div>
                                     </li>
                                     <li class="splide__slide">
                                         <div class="intro__counter-item">
                                             <div class="counter" data-target="5329"></div>
-                                            <span>Курьеров</span>
+                                            <span th:utext="#{counter.couriers}">Курьеров</span>
                                         </div>
                                     </li>
                                     <li class="splide__slide">
                                         <div class="intro__counter-item">
                                             <div class="counter" data-target="10871"></div>
-                                            <span>Заказов</span>
+                                            <span th:utext="#{counter.orders}">Заказов</span>
                                         </div>
                                     </li>
                                     <li class="splide__slide">
                                         <div class="intro__counter-item">
                                             <div class="counter" data-target="12358"></div>
-                                            <span>Выплат</span>
+                                            <span th:utext="#{counter.transfers}">Выплат</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -190,10 +251,10 @@
                             <div class="intro__item-img">
                                 <img alt="Card" height="30" src="/static/img/icons/card-pob.svg" width="30">
                             </div>
-                            <h4 class="g-title g-title--h4 intro__item-title">
+                            <h4 class="g-title g-title--h4 intro__item-title" th:utext="#{services.trc}">
                                 Карта Побыта
                             </h4>
-                            <div class="intro__item-text">
+                            <div class="intro__item-text" th:utext="#{services.trc.desc}">
                                 Карта Побыта это документ подтверждающий ваше право легально находиться и работать в Польше.
                                 Имея вид на жительство и паспорт, Вы можете пересекать границу без визы.
                             </div>
@@ -202,10 +263,10 @@
                             <div class="intro__item-img">
                                 <img alt="Taxi" height="30" src="/static/img/icons/car.svg" width="30">
                             </div>
-                            <h4 class="g-title g-title--h4 intro__item-title">
+                            <h4 class="g-title g-title--h4 intro__item-title" th:utext="#{services.taxi}">
                                 Работа в такси
                             </h4>
-                            <div class="intro__item-text">
+                            <div class="intro__item-text" th:utext="#{services.taxi.desc}">
                                 Предлагаем работу водителем в Польше на платформах <strong>UBER</strong> /
                                 <strong>BOLT</strong> / <strong>Free Now</strong>.
                                 Работа на новых автомобилях от 2020 года (KIA, FORD, HYUNDAI)
@@ -215,10 +276,10 @@
                             <div class="intro__item-img">
                                 <img alt="Delivery" height="30" src="/static/img/icons/routing.svg" width="30">
                             </div>
-                            <h4 class="g-title g-title--h4 intro__item-title">
+                            <h4 class="g-title g-title--h4 intro__item-title" th:utext="#{services.courier}">
                                 Работа курьером
                             </h4>
-                            <div class="intro__item-text">
+                            <div class="intro__item-text" th:utext="#{services.courier.desc}">
                                 <strong>BezProblem</strong> - партнер <strong>UBER EATS</strong> / <strong>BOLT
 								FOOD</strong> / <strong>Stuart</strong>.
                                 Предлагаем Вам работу курьером в Польше на мировых платформах!
@@ -228,10 +289,10 @@
                             <div class="intro__item-img">
                                 <img alt="Job agency" height="30" src="/static/img/icons/personalcard.svg" width="30">
                             </div>
-                            <h4 class="g-title g-title--h4 intro__item-title">
+                            <h4 class="g-title g-title--h4 intro__item-title" th:utext="#{services.work}">
                                 Агенство труда
                             </h4>
-                            <div class="intro__item-text">
+                            <div class="intro__item-text" th:utext="#{services.work.desc}">
                                 Работа в Польше на фабриках, складах, заводах, теплицах и т.д.
                             </div>
                         </div>
@@ -242,7 +303,7 @@
             <!-- Options -->
             <section class="options section-mb" id="options">
                 <div class="container">
-                    <h2 class="g-title g-title--h2">
+                    <h2 class="g-title g-title--h2" th:utext="#{options}">
                         Варианты сотрудничества
                     </h2>
                     <div class="options__inner">
@@ -255,39 +316,39 @@
                                                 <h3 class="g-title g-title--h3">
                                                     Standard
                                                 </h3>
-                                                <span class="options__payment">Выплата раз в неделю</span>
-                                                <span class="options__time">Комиссия за <strong>неделю</strong>
+                                                <span class="options__payment" th:utext="#{options.weekly}">Выплата раз в неделю</span>
+                                                <span class="options__time" th:utext="#{options.weekly.fee}">Комиссия за <strong>неделю</strong>
 													</span>
                                                 <ul class="options__list flex-c">
                                                     <li>
-                                                        <span>30 zl</span> - 1 приложение
+                                                        <span>30 zl</span><a th:utext="#{options.one_app}"> - 1 приложение</a>
                                                     </li>
                                                     <li>
-                                                        <span>40 zl</span> - 2 приложения
+                                                        <span>40 zl</span><a th:utext="#{options.two_app}"> - 2 приложения</a>
                                                     </li>
                                                     <li>
-                                                        <span>50 zl</span> - 3 приложения
+                                                        <span>50 zl</span><a th:utext="#{options.three_app}"> - 3 приложения</a>
                                                     </li>
                                                 </ul>
-                                                <span class="options__time">
+                                                <span class="options__time" th:utext="#{options.rent_day}">
 														Аренда в <strong>день</strong>
 													</span>
                                                 <ul class="options__list flex-c">
                                                     <li>
                                                         <span>15 zl</span>
-                                                        - спортивный велосипед
+                                                        <a th:utext="#{bicycle.normal}">- спортивный велосипед</a>
                                                     </li>
                                                     <li>
                                                         <span>30 zl</span>
-                                                        - электровелосипед
+                                                        <a th:utext="#{bicycle.electric}">- электровелосипед</a>
                                                     </li>
                                                     <li>
                                                         <span>40 zl</span>
-                                                        - электровелосипед +
+                                                        <a th:utext="#{bicycle.electric_plus}">- электровелосипед +</a>
                                                     </li>
                                                 </ul>
                                                 <div class="options__btn g-button">
-                                                    <a href="#">
+                                                    <a href="#" th:utext="#{register}">
                                                         Подключить
                                                     </a>
                                                 </div>
@@ -300,12 +361,13 @@
                                                 <h3 class="g-title g-title--h3">
                                                     Standard +
                                                 </h3>
-                                                <span class="options__payment">Выплата каждый день</span>
-                                                <span class="options__time">Комиссия за <strong>день</strong>
+                                                <span class="options__payment" th:utext="#{options.daily}">Выплата каждый день</span>
+                                                <span class="options__time" th:utext="#{options.daily.fee}">Комиссия за <strong>день</strong>
 													</span>
                                                 <ul class="options__list flex-c">
                                                     <li>
-                                                        <span>15 zl</span> - неограниченное количество приложений
+                                                        <span>15 zl</span>
+                                                        <a th:utext="#{options.unlim_app}">- неограниченное количество приложений</a>
                                                     </li>
                                                     <li>
                                                         <span></span>
@@ -314,25 +376,25 @@
                                                     <!--															<span></span>-->
                                                     <!--														</li>-->
                                                 </ul>
-                                                <span class="options__time">
+                                                <span class="options__time" th:utext="#{options.rent_day}">
 														Аренда в <strong>день</strong>
 													</span>
                                                 <ul class="options__list flex-c">
                                                     <li>
                                                         <span>15 zl</span>
-                                                        - спортивный велосипед
+                                                        <a th:utext="#{bicycle.normal}">- спортивный велосипед</a>
                                                     </li>
                                                     <li>
                                                         <span>30 zl</span>
-                                                        - электровелосипед
+                                                        <a th:utext="#{bicycle.electric}">- электровелосипед</a>
                                                     </li>
                                                     <li>
                                                         <span>40 zl</span>
-                                                        - электровелосипед +
+                                                        <a th:utext="#{bicycle.electric_plus}">- электровелосипед +</a>
                                                     </li>
                                                 </ul>
                                                 <div class="options__btn g-button">
-                                                    <a href="#">
+                                                    <a href="#" th:utext="#{register}">
                                                         Подключить
                                                     </a>
                                                 </div>
@@ -345,39 +407,40 @@
                                                 <h3 class="g-title g-title--h3">
                                                     Premium
                                                 </h3>
-                                                <span class="options__payment">Выплата каждый день</span>
-                                                <span class="options__time">Комиссия за <strong>день</strong>
+                                                <span class="options__payment" th:utext="#{options.daily}">Выплата каждый день</span>
+                                                <span class="options__time" th:utext="#{options.daily.fee}">Комиссия за <strong>день</strong>
 													</span>
                                                 <ul class="options__list flex-c">
                                                     <li>
-                                                        <span>20 zl</span> - неограниченное количество приложений
+                                                        <span>20 zl</span>
+                                                        <a th:utext="#{options.unlim_app}"> - неограниченное количество приложений</a>
                                                     </li>
                                                     <li>
-                                                        <span>Быстрый старт</span>
+                                                        <span th:utext="#{options.fast_start}">Быстрый старт</span>
                                                     </li>
                                                     <!--														<li>-->
                                                     <!--															<span></span>-->
                                                     <!--														</li>-->
                                                 </ul>
-                                                <span class="options__time">
+                                                <span class="options__time" th:utext="#{options.rent_day}">
 														Аренда в <strong>день</strong>
 													</span>
                                                 <ul class="options__list flex-c">
                                                     <li>
                                                         <span>15 zl</span>
-                                                        - спортивный велосипед
+                                                        <a th:utext="#{bicycle.normal}">- спортивный велосипед</a>
                                                     </li>
                                                     <li>
                                                         <span>30 zl</span>
-                                                        - электровелосипед
+                                                        <a th:utext="#{bicycle.electric}">- электровелосипед</a>
                                                     </li>
                                                     <li>
                                                         <span>40 zl</span>
-                                                        - электровелосипед +
+                                                        <a th:utext="#{bicycle.electric_plus}">- электровелосипед +</a>
                                                     </li>
                                                 </ul>
                                                 <div class="options__btn g-button">
-                                                    <a href="#">
+                                                    <a href="#" th:utext="#{register}">
                                                         Подключить
                                                     </a>
                                                 </div>
@@ -390,8 +453,8 @@
                                                 <h3 class="g-title g-title--h3">
                                                     xPress Delivery
                                                 </h3>
-                                                <span class="options__payment">Выплата раз в 2 недели</span>
-                                                <span class="options__time">Комиссия за <strong>2 недели</strong>
+                                                <span class="options__payment" th:utext="#{options.two_week}">Выплата раз в 2 недели</span>
+                                                <span class="options__time" th:utext="#{options.two_week.fee}">Комиссия за <strong>2 недели</strong>
 													</span>
                                                 <ul class="options__list flex-c">
                                                     <li>
@@ -404,25 +467,25 @@
                                                         <span></span>
                                                     </li>
                                                 </ul>
-                                                <span class="options__time">
+                                                <span class="options__time" th:utext="#{options.rent_day}">
 														Аренда в <strong>день</strong>
 													</span>
                                                 <ul class="options__list flex-c">
                                                     <li>
                                                         <span>15 zl</span>
-                                                        - спортивный велосипед
+                                                        <a th:utext="#{bicycle.normal}">- спортивный велосипед</a>
                                                     </li>
                                                     <li>
                                                         <span>30 zl</span>
-                                                        - электровелосипед
+                                                        <a th:utext="#{bicycle.electric}">- электровелосипед</a>
                                                     </li>
                                                     <li>
                                                         <span>40 zl</span>
-                                                        - электровелосипед +
+                                                        <a th:utext="#{bicycle.electric_plus}">- электровелосипед +</a>
                                                     </li>
                                                 </ul>
                                                 <div class="options__btn g-button">
-                                                    <a href="#">
+                                                    <a href="#" th:utext="#{register}">
                                                         Подключить
                                                     </a>
                                                 </div>
@@ -440,7 +503,7 @@
             <section class="partners section-mb" id="partners">
                 <div class="container">
                     <div class="partners__inner flex-c">
-                        <h2 class="g-title g-title--h2">
+                        <h2 class="g-title g-title--h2" th:utext="#{menu.partners}">
                             Наши партнёры
                         </h2>
                         <div class="partners__slider splide splide3">
@@ -476,7 +539,7 @@
                             </div>
                         </div>
                         <div class="g-button">
-                            <a href="#">
+                            <a href="#" th:utext="#{register}">
                                 Регистрация
                             </a>
                         </div>
@@ -488,16 +551,16 @@
             <section class="benefits section-mb">
                 <div class="container">
                     <div class="benefits__inner flex-c">
-                        <h2 class="g-title g-title--h2">Преимущества работы с нами</h2>
+                        <h2 class="g-title g-title--h2" th:utext="#{benefits}">Преимущества работы с нами</h2>
                         <div class="benefits__item">
                             <div class="benefits__picture flex">
                                 <img alt="Benefits" loading="lazy" src="/static/img/benefits/payments.webp">
                             </div>
                             <div class="benefits__text">
-                                <h3 class="g-title g-title--h3">
+                                <h3 class="g-title g-title--h3" th:utext="#{options.daily}">
                                     Ежедневные выплаты
                                 </h3>
-                                <p class="g-text">
+                                <p class="g-text" th:utext="#{benefits.daily}">
                                     У вас будет возможность выбирать наиболее подходящие для вас условия выплат
                                     как в ежедневном формате так и раз в неделю. Мы гарантируем своевременные
                                     и полные выплаты от фирм партнёров.
@@ -506,10 +569,10 @@
                         </div>
                         <div class="benefits__item">
                             <div class="benefits__text">
-                                <h3 class="g-title g-title--h3">
+                                <h3 class="g-title g-title--h3" th:utext="#{benefits.recommended_partner}">
                                     Рекомендованный партнёр
                                 </h3>
-                                <p class="g-text">
+                                <p class="g-text" th:utext="#{benefits.recommended_partner.desc}">
                                     Мы являемся проверенным и многолетним партнёром таких транспортных компаний, как
                                     Uber, Uber Eats, Bolt, Bolt Food, Free
                                     Now, Stuart, а также xPress Delivery. С приложениями Uber и Bolt мы
@@ -527,10 +590,10 @@
                                 <img alt="Benefits" loading="lazy" src="/static/img/benefits/support.webp">
                             </div>
                             <div class="benefits__text">
-                                <h3 class="g-title g-title--h3">
+                                <h3 class="g-title g-title--h3" th:utext="#{benefits.support}">
                                     Поддержка 24/7
                                 </h3>
-                                <p class="g-text">
+                                <p class="g-text" th:utext="#{benefits.support.desc}">
                                     Наша компания имеет собственный отдел технической поддержки - залог того, что
                                     Вы
                                     никогда не останетесь без нашей помощи в
@@ -540,10 +603,10 @@
                         </div>
                         <div class="benefits__item">
                             <div class="benefits__text">
-                                <h3 class="g-title g-title--h3">
+                                <h3 class="g-title g-title--h3" th:utext="#{benefits.legal}">
                                     Легальное трудоустройство
                                 </h3>
-                                <p class="g-text">
+                                <p class="g-text" th:utext="#{benefits.legal.desc}">
                                     В нашей компании есть отдел занимающийся всеми юридическими вопросами. Наши юристы с радостью помогут вам в
 									открытии фирмы, оформлении Карты Побыта, а так же получении разрешения на работу в Польше.
                                 </p>
@@ -560,7 +623,7 @@
             <section class="contact" id="contact">
                 <div class="container">
                     <div class="contact__inner">
-                        <h2 class="g-title g-title--h2">
+                        <h2 class="g-title g-title--h2" th:utext="#{contact_us}">
                             Свяжитесь с нами!
                         </h2>
                         <div class="contact__items">
@@ -571,25 +634,29 @@
                                         <li>
                                             <a class="contact__item-address"
                                                href="https://goo.gl/maps/Giifxt4N3fJe3x4LA" target="_blank">
-                                                <strong>Адрес:</strong> Lędzka 44, 01-446</a>
+                                                <a th:utext="#{contact.address}"><strong>Адрес:</strong></a> Lędzka 44, 01-446</a>
                                         </li>
                                         <li class="contact__item-shedule">
-                                            <strong>
+                                            <a th:utext="#{contact.schedule}">
+                                                <strong>
                                                 График:
                                             </strong>
-                                            пн. - пт. 10:00 - 18:00
-											сб. 10:00-14:00
+                                            </a>
+                                            <a th:utext="#{contact.mo_fr}">пн. - пт.</a> 10:00 - 18:00
+											<a th:utext="#{contact.saturday}">сб.</a> 10:00-14:00
                                         </li>
                                         <li>
                                             <a href="tel:+48606890410">
-                                                <strong>Офис:</strong>
+                                                <a th:utext="#{contact.office}"><strong>Офис:</strong></a>
                                                 +48 606 890 410</a>
                                         </li>
                                         <li>
                                             <a href="tel:+48787598910">
+                                                <a th:utext="#{contact.additional_number}">
                                                 <strong>
                                                     Доп. номер:
                                                 </strong>
+                                                </a>
                                                 +48 787 598 910
                                             </a>
                                         </li>
@@ -603,25 +670,30 @@
                                         <li>
                                             <a class="contact__item-address"
                                                href="https://goo.gl/maps/Wj1LMsdofnAU7jut8" target="_blank">
-                                                <strong>Адрес:</strong> Szlak 30, 31-153</a>
+                                                <a th:utext="#{contact.address}"><strong>Адрес:</strong></a> Szlak 30, 31-153</a>
                                         </li>
                                         <li class="contact__item-shedule">
-                                            <strong>
-                                                График:
-                                            </strong>
-                                            пн. - пт. 10:00 - 18:00
-                                            сб. 10:00-14:00
+                                            <a th:utext="#{contact.schedule}">
+                                                <strong>
+                                                    График:
+                                                </strong>
+                                            </a>
+                                            <a th:utext="#{contact.mo_fr}">пн. - пт.</a> 10:00 - 18:00
+                                            <a th:utext="#{contact.saturday}">сб.</a> 10:00-14:00
                                         </li>
                                         <li>
                                             <a href="tel:+48660770232">
-                                                <strong>Офис:</strong>
-                                                +48 660 770 232</a>
+                                                <a th:utext="#{contact.office}"><strong>Офис:</strong></a>
+                                                +48 660 770 232
+                                            </a>
                                         </li>
                                         <li>
                                             <a href="tel:+48787556869">
-                                                <strong>
-                                                    Доп. номер:
-                                                </strong>
+                                                <a th:utext="#{contact.additional_number}">
+                                                    <strong>
+                                                        Доп. номер:
+                                                    </strong>
+                                                </a>
                                                 +48 787 556 869
                                             </a>
                                         </li>
@@ -635,25 +707,29 @@
                                         <li>
                                             <a class="contact__item-address"
                                                href="https://g.page/ravapi-bezproblem-gdansk?share" target="_blank">
-                                                <strong>Адрес:</strong> Konrada Leczkowa 19, 80-432</a>
+                                                <a th:utext="#{contact.address}"><strong>Адрес:</strong></a> Konrada Leczkowa 19, 80-432</a>
                                         </li>
                                         <li class="contact__item-shedule">
-                                            <strong>
-                                                График:
-                                            </strong>
-                                            пн. - пт. 10:00 - 18:00
-                                            сб. 10:00-14:00
+                                            <a th:utext="#{contact.schedule}">
+                                                <strong>
+                                                    График:
+                                                </strong>
+                                            </a>
+                                            <a th:utext="#{contact.mo_fr}">пн. - пт.</a> 10:00 - 18:00
+                                            <a th:utext="#{contact.saturday}">сб.</a> 10:00-14:00
                                         </li>
                                         <li>
                                             <a href="tel:+48660770606">
-                                                <strong>Офис:</strong>
+                                                <a th:utext="#{contact.office}"><strong>Офис:</strong></a>
                                                 +48  660 770 606</a>
                                         </li>
                                         <li>
                                             <a href="tel:+48787567270">
-                                                <strong>
-                                                    Доп. номер:
-                                                </strong>
+                                                <a th:utext="#{contact.additional_number}">
+                                                    <strong>
+                                                        Доп. номер:
+                                                    </strong>
+                                                </a>
                                                 +48 787 567 270
                                             </a>
                                         </li>
@@ -667,25 +743,29 @@
                                         <li>
                                             <a class="contact__item-address"
                                                href="https://goo.gl/maps/KXxKGYUXNxRa2NCcA" target="_blank">
-                                                <strong>Адрес:</strong> Półwiejska 41, 61-888</a>
+                                                <a th:utext="#{contact.address}"><strong>Адрес:</strong></a> Półwiejska 41, 61-888</a>
                                         </li>
                                         <li class="contact__item-shedule">
-                                            <strong>
-                                                График:
-                                            </strong>
-                                            пн. - пт. 10:00 - 18:00
-                                            сб. 10:00-14:00
+                                            <a th:utext="#{contact.schedule}">
+                                                <strong>
+                                                    График:
+                                                </strong>
+                                            </a>
+                                            <a th:utext="#{contact.mo_fr}">пн. - пт.</a> 10:00 - 18:00
+                                            <a th:utext="#{contact.saturday}">сб.</a> 10:00-14:00
                                         </li>
                                         <li>
                                             <a href="tel:+48660770959">
-                                                <strong>Офис:</strong>
+                                                <a th:utext="#{contact.office}"><strong>Офис:</strong></a>
                                                 +48  660 770 959</a>
                                         </li>
                                         <li>
                                             <a href="tel:+48787539780">
-                                                <strong>
-                                                    Доп. номер:
-                                                </strong>
+                                                <a th:utext="#{contact.additional_number}">
+                                                    <strong>
+                                                        Доп. номер:
+                                                    </strong>
+                                                </a>
                                                 +48 787 539 780
                                             </a>
                                         </li>
@@ -699,25 +779,29 @@
                                         <li>
                                             <a class="contact__item-address"
                                                href="https://goo.gl/maps/5FMuKYK6k6nWXJxV7" target="_blank">
-                                                <strong>Адрес:</strong> Mikołaja Reja 72/1a, 50-343</a>
+                                                <a th:utext="#{contact.address}"><strong>Адрес:</strong></a> Mikołaja Reja 72/1a, 50-343</a>
                                         </li>
                                         <li class="contact__item-shedule">
-                                            <strong>
-                                                График:
-                                            </strong>
-                                            пн. - пт. 10:00 - 18:00
-                                            сб. 10:00-14:00
+                                            <a th:utext="#{contact.schedule}">
+                                                <strong>
+                                                    График:
+                                                </strong>
+                                            </a>
+                                            <a th:utext="#{contact.mo_fr}">пн. - пт.</a> 10:00 - 18:00
+                                            <a th:utext="#{contact.saturday}">сб.</a> 10:00-14:00
                                         </li>
                                         <li>
                                             <a href="tel:+48660770253">
-                                                <strong>Офис:</strong>
+                                                <a th:utext="#{contact.office}"><strong>Офис:</strong></a>
                                                 +48 660 770 253</a>
                                         </li>
                                         <li>
                                             <a href="tel:+48787516586">
-                                                <strong>
-                                                    Доп. номер:
-                                                </strong>
+                                                <a th:utext="#{contact.additional_number}">
+                                                    <strong>
+                                                        Доп. номер:
+                                                    </strong>
+                                                </a>
                                                 +48 787 516 586
                                             </a>
                                         </li>
@@ -731,25 +815,29 @@
                                         <li>
                                             <a class="contact__item-address"
                                                href="https://g.page/ravapi-radom?share" target="_blank">
-                                                <strong>Адрес:</strong> Szarych Szeregów 30, 26-605</a>
+                                                <a th:utext="#{contact.address}"><strong>Адрес:</strong></a> Szarych Szeregów 30, 26-605</a>
                                         </li>
                                         <li class="contact__item-shedule">
-                                            <strong>
-                                                График:
-                                            </strong>
-                                            пн. - пт. 10:00 - 17:00
-                                            сб. 10:00-14:00
+                                            <a th:utext="#{contact.schedule}">
+                                                <strong>
+                                                    График:
+                                                </strong>
+                                            </a>
+                                            <a th:utext="#{contact.mo_fr}">пн. - пт.</a> 10:00 - 17:00
+                                            <a th:utext="#{contact.saturday}">сб.</a> 10:00-14:00
                                         </li>
                                         <li>
                                             <a href="tel:+48884102504">
-                                                <strong>Офис:</strong>
+                                                <a th:utext="#{contact.office}"><strong>Офис:</strong></a>
                                                 +48 884 102 504</a>
                                         </li>
                                         <li>
                                             <a href="tel:+48660642460">
-                                                <strong>
-                                                    Доп. номер:
-                                                </strong>
+                                                <a th:utext="#{contact.additional_number}">
+                                                    <strong>
+                                                        Доп. номер:
+                                                    </strong>
+                                                </a>
                                                 +48 660 642 460
                                             </a>
                                         </li>
@@ -763,24 +851,28 @@
                                         <li>
                                             <a class="contact__item-address"
                                                href="https://goo.gl/maps/St55c9XDvUBMkT368" target="_blank">
-                                                <strong>Адрес:</strong> Kongresowa 28, 25-672</a>
+                                                <a th:utext="#{contact.address}"><strong>Адрес:</strong></a> Kongresowa 28, 25-672</a>
                                         </li>
                                         <li class="contact__item-shedule">
-                                            <strong>
-                                                График:
-                                            </strong>
-                                            пн. - пт. 10:00 - 17:00
+                                            <a th:utext="#{contact.schedule}">
+                                                <strong>
+                                                    График:
+                                                </strong>
+                                            </a>
+                                            <a th:utext="#{contact.mo_fr}">пн. - пт.</a> 10:00 - 17:00
                                         </li>
                                         <li>
                                             <a href="tel:+48660770528">
-                                                <strong>Офис:</strong>
+                                                <a th:utext="#{contact.office}"><strong>Офис:</strong></a>
                                                 +48 660 770 528</a>
                                         </li>
                                         <li>
                                             <a href="tel:+48660770133">
-                                                <strong>
-                                                    Доп. номер:
-                                                </strong>
+                                                <a th:utext="#{contact.additional_number}">
+                                                    <strong>
+                                                        Доп. номер:
+                                                    </strong>
+                                                </a>
                                                 +48 660 770 133
                                             </a>
                                         </li>
@@ -794,25 +886,29 @@
                                         <li>
                                             <a class="contact__item-address"
                                                href="https://goo.gl/maps/2ps9kJhv3DhEjuzG7" target="_blank">
-                                                <strong>Адрес:</strong> Gdańska 11, 91-066</a>
+                                                <a th:utext="#{contact.address}"><strong>Адрес:</strong></a> Gdańska 11, 91-066</a>
                                         </li>
                                         <li class="contact__item-shedule">
-                                            <strong>
-                                                График:
-                                            </strong>
-                                            пн. - пт. 10:00 - 18:00
-                                            сб. 10:00-14:00
+                                            <a th:utext="#{contact.schedule}">
+                                                <strong>
+                                                    График:
+                                                </strong>
+                                            </a>
+                                            <a th:utext="#{contact.mo_fr}">пн. - пт.</a> 10:00 - 18:00
+                                            <a th:utext="#{contact.saturday}">сб.</a> 10:00-14:00
                                         </li>
                                         <li>
                                             <a href="tel:+48787555820">
-                                                <strong>Офис:</strong>
+                                                <a th:utext="#{contact.office}"><strong>Офис:</strong></a>
                                                 +48 787 555 820</a>
                                         </li>
                                         <li>
                                             <a href="tel:+48787567487">
-                                                <strong>
-                                                    Доп. номер:
-                                                </strong>
+                                                <a th:utext="#{contact.additional_number}">
+                                                    <strong>
+                                                        Доп. номер:
+                                                    </strong>
+                                                </a>
                                                 +48 787 567 487
                                             </a>
                                         </li>
@@ -826,18 +922,20 @@
                                         <li>
                                             <a class="contact__item-address"
                                                href="https://goo.gl/maps/HKim6k4T6KNVihjv8" target="_blank">
-                                                <strong>Адрес:</strong> Sobieskiego 11, 40-082</a>
+                                                <a th:utext="#{contact.address}"><strong>Адрес:</strong></a> Sobieskiego 11, 40-082</a>
                                         </li>
                                         <li class="contact__item-shedule">
-                                            <strong>
-                                                График:
-                                            </strong>
-                                            пн. - пт. 10:00 - 18:00
-                                            сб. 10:00-14:00
+                                            <a th:utext="#{contact.schedule}">
+                                                <strong>
+                                                    График:
+                                                </strong>
+                                            </a>
+                                            <a th:utext="#{contact.mo_fr}">пн. - пт.</a> 10:00 - 18:00
+                                            <a th:utext="#{contact.saturday}">сб.</a> 10:00-14:00
                                         </li>
                                         <li>
                                             <a href="tel:+48888627625">
-                                                <strong>Офис:</strong>
+                                                <a th:utext="#{contact.office}"><strong>Офис:</strong></a>
                                                 +48 888 627 625</a>
                                         </li>
 <!--                                        <li>-->
@@ -858,17 +956,19 @@
                                         <li>
                                             <a class="contact__item-address"
                                                href="https://goo.gl/maps/azevJRttQ2rq36cp8" target="_blank">
-                                                <strong>Адрес:</strong> Ve Smečkách 605, 110 00</a>
+                                                <a th:utext="#{contact.address}"><strong>Адрес:</strong></a> Ve Smečkách 605, 110 00</a>
                                         </li>
                                         <li class="contact__item-shedule">
-                                            <strong>
-                                                График:
-                                            </strong>
-                                            пн. - пт. 10:00 - 18:00
+                                            <a th:utext="#{contact.schedule}">
+                                                <strong>
+                                                    График:
+                                                </strong>
+                                            </a>
+                                            <a th:utext="#{contact.mo_fr}">пн. - пт.</a> 10:00 - 18:00
                                         </li>
                                         <li>
                                             <a href="tel:+420773719901">
-                                                <strong>Офис:</strong>
+                                                <a th:utext="#{contact.office}"><strong>Офис:</strong></a>
                                                 +420 773 719 901</a>
                                         </li>
 <!--                                        <li>-->
@@ -900,9 +1000,9 @@
             </div>
             <div class="callback__form">
                 <form name="requestCall" method="post" th:action="@{/call}">
-                    <input name="credentials" placeholder="Ваши имя и фамилия" required type="text">
-                    <input name="phoneNumber" placeholder="Ваш телефон" required type="tel">
-                    <input type="submit" value="Отправить">
+                    <input name="credentials" th:placeholder="#{form.name}" required type="text">
+                    <input name="phoneNumber" th:placeholder="#{form.phone}" required type="tel">
+                    <input type="submit" th:value="#{form.send}">
                 </form>
             </div>
         </div>
@@ -918,7 +1018,7 @@
                 <div class="messengers__link s-telegram messengers__telegram global-btn">
                 </div>
                 <ul class="messengers__telegram-list global-div">
-                    <li class="global-btn">
+                    <li class="global-btn" th:text="#{contact.telegram}">
                         Нажмите на ссылку для перехода в чат
                     </li>
                     <li>
@@ -989,7 +1089,7 @@
             </li>
             <li>
                 <a class="messengers__link s-phone" href="tel:+48733833388">
-                    <span>Позвони нам</span>
+                    <span th:text="#{contact.call_us}">Позвони нам</span>
                 </a>
             </li>
         </ul>
@@ -1006,12 +1106,12 @@
                 </div>
                 <ul class="footer__list flex">
                     <li>
-                        <a class="hover-link scroll-to" href="#options">
+                        <a class="hover-link scroll-to" href="#options" th:text="#{menu.fees}">
                             Тарифы
                         </a>
                     </li>
                     <li>
-                        <a class="hover-link scroll-to" href="#partners">
+                        <a class="hover-link scroll-to" href="#partners" th:text="#{menu.partners}">
                             Партнёры
                         </a>
                     </li>

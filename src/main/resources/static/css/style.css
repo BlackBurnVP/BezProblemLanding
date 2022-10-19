@@ -1321,3 +1321,93 @@ i {
   transform: scale(1);
   background: #1e8fe5 !important;
 }
+
+.header__lang {
+  display: flex;
+  align-items: center;
+  width: 75px;
+  height: 36px;
+  background: #242633;
+  border-radius: 10px;
+  position: relative;
+}
+
+.header__lang .lang-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.custom-select {
+  width: 100%;
+  position: relative;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+.custom-select select {
+  display: none;
+}
+.custom-select .select-selected {
+  color: #CECFDE;
+  padding: 11px 18px 11px 34px;
+  cursor: pointer;
+}
+.custom-select .select-selected:after {
+  position: absolute;
+  content: "";
+  background-color: #6B6F80;
+  width: 8px;
+  height: 8px;
+  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+.custom-select .select-selected.select-arrow-active:after {
+  transform: rotate(180deg) translateY(50%);
+}
+.custom-select .select-items {
+  min-width: 75px;
+  background: #242633;
+  border-radius: 10px;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  transform: translateY(0);
+  transition: opacity 0.3s, transform 0.3s;
+  color: #fff;
+}
+.custom-select .select-items.select-hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(50px);
+}
+.custom-select .select-item {
+  padding: 8px 16px 8px 34px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background-color 0.2s;
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 16px 16px;
+}
+.custom-select .select-item:last-child {
+  border: 0;
+}
+.custom-select .select-item:hover, .custom-select .select-item.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
