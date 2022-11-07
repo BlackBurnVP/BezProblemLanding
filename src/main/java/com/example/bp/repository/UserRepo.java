@@ -12,7 +12,9 @@ public interface UserRepo extends CrudRepository<User, Long> {
     User getSystemUser();
 
     @Query(value = "select * from usr " +
-            "inner join user_role ur on usr.id = ur.user_id " +
-            "where ur.roles = 'Call_Center' and notifications is true ", nativeQuery = true)
+            "            inner join usr_roles ur on usr.id = ur.user_id " +
+            "            inner join role r on ur.roles_id = r.id " +
+            "            where r.name = 'Call Center' and usr.notifications is true  " +
+            "              and usr.chat_id is not null and usr.chat_id != '';", nativeQuery = true)
     List<User> findByCallCenter();
 }
